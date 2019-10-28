@@ -1,0 +1,17 @@
+{
+  "extends": "./node_modules/mlz-lint/tsconfig.json",
+  "files": [
+    "./js_transition.d.ts"
+  ],
+  "include": [
+    "types",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "awesomeTypescriptLoaderOptions": { // 加速编译
+    "useBabel": true
+  }
+}
