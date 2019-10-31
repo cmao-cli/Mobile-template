@@ -22,6 +22,10 @@ node_modules/
 .vscode/
 .history/
 
+# build artifacts
+build/index.html
+build/favicon.*
+
 # config override
 config/local.json
 

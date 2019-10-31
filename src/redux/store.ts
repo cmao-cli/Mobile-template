@@ -1,6 +1,5 @@
-// tslint:disable-next-line:no-unused-variable
 import {  createStore, applyMiddleware, Middleware, Store } from 'redux';
-import { root_reducer, ReduxState } from './root_reducer';
+import { root_reducer, ReduxState } from './reducer';
 
 export type StoreType = Store<ReduxState>;
 

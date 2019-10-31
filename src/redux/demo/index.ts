@@ -15,7 +15,7 @@ export const demo = createModel({
     'demo/add': {
       name: Raw('add_num'),
       reducer: (state, action:Action<number>) : DemoState => {
-        const temp = state.num + action.payload;
+        const temp = state.num + action.payload!;
         console.log(temp);
         return Object.assign({}, state, {num: temp});
       },
@@ -23,7 +23,7 @@ export const demo = createModel({
     'demo/minus': {
       name: Raw('minus_num'),
       reducer: (state, action:Action<number>) : DemoState => {
-        const temp = state.num - action.payload;
+        const temp = state.num - action.payload!;
         return Object.assign({}, state, {num: temp});
       },
     },

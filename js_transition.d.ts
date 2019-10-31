@@ -8,3 +8,5 @@ declare var DEBUG:any;
 interface NodeRequire {
   ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void, name?:string ) => void;
 }
+
+interface DefaultObject {[key:string]: any}

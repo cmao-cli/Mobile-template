@@ -1,18 +1,23 @@
 const path = require('path');
 
 module.exports = {
-  "baseUrl": __dirname,
-  "entry": [path.join(__dirname, './src/index.tsx')],
-  html:{
-    filename: 'index.html',
-    template: path.join(__dirname, 'src/index.ejs'),
-  },
-  alias: {
-    src: path.join(__dirname, 'src'),
-  },
-  globalVariable: {
-    Debug: false
-  },
-  analyze: false,
-  port: 5000,
+  webpack: {
+    rootPath: __dirname,
+    entryPath: [path.join(__dirname, './src/index.tsx')],
+    htmlPlugin:{
+      filename: 'index.html',
+      template: path.join(__dirname, 'src/index.ejs'),
+      favicon: path.join(__dirname, '/favicon.ico'),
+    },
+    alias: {
+      src: path.join(__dirname, 'src'),
+    },
+    definePlugin: {
+      Debug: false
+    },
+    analyzePlugin: false,
+    devServer: {
+      port: 4000,
+    }
+  }
 }

@@ -3,15 +3,9 @@
   "version": "0.0.0",
   "description": "template for mobile website",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --config webpack.dev.config.js",
-    "start": "./script/dev_server.sh",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "start:prod": "node ./bin/product_server.js",
-    "dll": "cross-env NODE_ENV=development webpack --progress --colors --config webpack/webpack.dll.config.js",
-    "stats": "webpack --config webpack.config.js -p --progress --json > stats.json",
-    "lint": "./node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx'",
-    "unit_test": "./node_modules/jest/bin/jest.js --color",
-    "test": "tslint -c tslint.json -p tsconfig.json"
+    "start": "cross-env NODE_ENV=development mlz-pack serve",
+    "build": "cross-env NODE_ENV=production mlz-pack build",
+    "production": "cross-env NODE_ENV=production node bin/server.js"
   },
   "author": "juice cube",
   "license": "ISC",
@@ -27,8 +21,11 @@
     "redux": "^4.0.4"
   },
   "devDependencies": {
+    "@mlz/lint": "^1.0.7",
+    "@mlz/pack": "0.0.11",
     "@types/classnames": "^2.2.9",
     "@types/node": "^12.6.2",
+    "@types/react-css-modules": "^4.6.2",
     "@types/react-dom": "^16.9.2",
     "@types/react-loadable": "^5.5.2",
     "@types/react-redux": "^7.1.4",
