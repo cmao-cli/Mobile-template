@@ -9,11 +9,6 @@
   },
   "author": "juice cube",
   "license": "ISC",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -e $GIT_PARAMS"
