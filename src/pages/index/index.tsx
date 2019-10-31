@@ -4,7 +4,7 @@ import * as cx from 'classnames';
 import { bindActionCreators } from 'redux';
 
 import { ReduxState } from 'src/redux/reducer';
-import { DemoState, add_num, minus_num } from 'src/redux/demo/reducer';
+import { DemoState, add_num, minus_num } from 'src/redux/demo';
 import './index.scss';
 
 interface IndexProps {
