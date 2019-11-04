@@ -3,6 +3,8 @@
   height: 100%;
   background: #000;
   overflow: hidden;
+  background: url('./assets/test_jpg.jpeg');
+  background-size: contain;
   .icon {
     width: 100px;
     height: 100px;
