@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@mlz/axios": "^0.2.9",
+    "@mlz/super-utils": "^1.0.5",
     "classnames": "^2.2.6",
     "rdx-model": "0.0.2",
     "react": "^16.8.6",
