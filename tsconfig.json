@@ -1,16 +1,12 @@
 {
   "extends": "./node_modules/@mlz/lint/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "script/*": ["script/*"]
-    }
+    "baseUrl": ".",   
   },
   "files": [
     "./js_transition.d.ts"
   ],
   "include": [
-    "types",
     "src/**/*"
   ],
   "exclude": [
