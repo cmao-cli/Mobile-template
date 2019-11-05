@@ -10,7 +10,6 @@
     "./js_transition.d.ts"
   ],
   "include": [
-    "types",
     "src/**/*"
   ],
   "exclude": [
