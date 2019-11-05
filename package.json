@@ -5,16 +5,32 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development mlz-pack serve",
     "build": "cross-env NODE_ENV=production mlz-pack build",
-    "production": "cross-env NODE_ENV=production node bin/server.js"
+    "production": "cross-env NODE_ENV=production node bin/server.js",
+    "lint": "tslint -p "
   },
   "author": "juice cube",
   "license": "ISC",
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged && env-status-version-validate",
       "commit-msg": "commitlint -e $GIT_PARAMS"
     }
   },
+  "lint-staged": {
+    "linters": {
+      "*.{js,ts,tsx}": [
+        "tslint",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "bin/server.js",
+      "src/lib/**/*",
+      "*.test.(j|t)s"
+    ]
+  },
   "dependencies": {
+    "@mlz/axios": "^0.2.9",
     "classnames": "^2.2.6",
     "rdx-model": "0.0.2",
     "react": "^16.8.6",
@@ -23,12 +39,13 @@
     "react-redux": "^7.1.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.0.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@mlz/lint": "^1.0.7",
+    "@mlz/lint": "^1.0.9",
     "@mlz/pack": "0.0.15",
     "@types/classnames": "^2.2.9",
     "@types/node": "^12.6.2",
@@ -42,7 +59,9 @@
     "env-status": "^0.30.0",
     "express": "^4.17.1",
     "husky": "^3.0.9",
+    "lint-staged": "^8.0.4",
     "mlz-lint": "^1.0.2",
+    "tslint": "^6.0.0-beta0",
     "typescript": "^3.5.3"
   }
 }
