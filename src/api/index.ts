@@ -29,4 +29,4 @@ Http.setResInterceptor(
   },
 );
 
-export const tigerApi = new Http('https://backend-dev.codemao.cn');
+export const tigerApi = new Http('');
