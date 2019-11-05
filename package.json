@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "description": "template for mobile website",
   "scripts": {
-    "start": "cross-env NODE_ENV=development mlz-pack serve",
-    "build": "cross-env NODE_ENV=production mlz-pack build",
-    "production": "cross-env NODE_ENV=production node bin/server.js",
-    "lint": "tslint -p "
+    "start": "cross-env NODE_ENV=development npx mlz-pack serve",
+    "build": "cross-env NODE_ENV=production npx mlz-pack build",
+    "production": "cross-env NODE_ENV=production node bin/server.js"
   },
   "author": "juice cube",
   "license": "ISC",
@@ -46,7 +45,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@mlz/lint": "^1.0.9",
-    "@mlz/pack": "0.0.15",
+    "@mlz/pack": "0.0.19",
     "@types/classnames": "^2.2.9",
     "@types/node": "^12.6.2",
     "@types/react-css-modules": "^4.6.2",
