@@ -5,7 +5,7 @@ export function setHtmlFont() {
   // adjust body font size
   function setBodyFontSize () {
     if (document.body) {
-      document.body.style.fontSize = (16 * dpr) + 'px';
+      document.body.style.fontSize = (16) + 'px';
     } else {
       document.addEventListener('DOMContentLoaded', setBodyFontSize);
     }

@@ -32,6 +32,7 @@ config/local.json
 webpack/dll
 # build
 build/
+example/
 
 #tgz
 *.tgz

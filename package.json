@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development npx mlz-pack serve",
     "build": "cross-env NODE_ENV=production npx mlz-pack build",
-    "production": "cross-env NODE_ENV=production node bin/server.js"
+    "production": "cross-env NODE_ENV=production node bin/server.js",
+    "example": "cross-env NODE_ENV=development npx mlz-pack serve example/index.tsx"
   },
   "author": "juice cube",
   "license": "ISC",
@@ -23,7 +24,9 @@
     "react-redux": "^7.1.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.0.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
+    "super-great-utils": "^1.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
