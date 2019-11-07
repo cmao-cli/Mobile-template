@@ -27,7 +27,7 @@ module.exports = {
     definePlugin: {
       Debug: false
     },
-    analyzePlugin: true,
+    analyzePlugin: false,
     devServer: {
       port: 4000,
     }

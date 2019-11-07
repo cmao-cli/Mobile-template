@@ -3,14 +3,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "src/*": ["example/*"]
+      "src/*": ["src/*"],
+      "example/*": ["example/*"]
     }
   },
   "files": [
     "./js_transition.d.ts"
   ],
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "example/**/*"
   ],
   "exclude": [
     "node_modules",
