@@ -19,6 +19,9 @@ module.exports = {
         'no_rem'
       ],
     },
+    libs: {
+      vender: ['react', 'react-dom'],
+    },
     htmlPlugin:{
       filename: 'index.html',
       template: path.join(__dirname, 'src/index.ejs'),
