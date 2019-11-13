@@ -5,12 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { _createStore } from './redux/root-store';
 import { Switch, Route } from 'react-router';
 import { routes } from './pages/router';
-/* tslint:disable-next-line */
-require('./commons/css/style.scss');
+
+import './commons/css/style.scss';
 
 const store = _createStore();
 const rootElement = document.getElementById('root');
-export const enum A {}
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
