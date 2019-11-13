@@ -22,7 +22,7 @@ module.exports = {
     libs: {
       vender: ['react', 'react-dom'],
     },
-    htmlPlugin:{
+    htmlPlugin: {
       filename: 'index.html',
       template: path.join(__dirname, 'src/index.ejs'),
       favicon: path.join(__dirname, '/favicon.ico'),
@@ -33,6 +33,6 @@ module.exports = {
     analyzePlugin: false,
     devServer: {
       port: 4000,
-    }
+    },
   }
 }

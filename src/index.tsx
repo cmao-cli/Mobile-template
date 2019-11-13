@@ -10,6 +10,7 @@ require('./commons/css/style.scss');
 
 const store = _createStore();
 const rootElement = document.getElementById('root');
+export const enum A {}
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
