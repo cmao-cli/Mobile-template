@@ -26,6 +26,7 @@
     "ignore": [
       "bin/server.js",
       "src/lib/**/*",
+      "mlz-pack.js",
       "*.test.(j|t)s"
     ]
   },
@@ -47,7 +48,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@mlz/lint": "^1.0.9",
-    "@mlz/pack": "^0.1.9",
+    "@mlz/pack": "^0.1.14",
     "@types/classnames": "^2.2.9",
     "@types/node": "^12.6.2",
     "@types/react-css-modules": "^4.6.2",
@@ -56,6 +57,7 @@
     "@types/react-redux": "^7.1.4",
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^5.1.0",
+    "compression": "^1.7.4",
     "cross-env": "^5.2.1",
     "env-status": "^0.30.0",
     "express": "^4.17.1",

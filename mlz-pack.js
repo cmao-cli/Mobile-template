@@ -20,7 +20,7 @@ module.exports = {
       ],
     },
     libs: {
-      vender: ['react', 'react-dom'],
+      vender: ['react', 'react-dom', 'react-router',  'react-router-dom'],
     },
     htmlPlugin: {
       filename: 'index.html',
@@ -28,9 +28,9 @@ module.exports = {
       favicon: path.join(__dirname, '/favicon.ico'),
     },
     definePlugin: {
-      Debug: false
+      Debug: false,
     },
-    analyzePlugin: false,
+    analyzePlugin: true,
     devServer: {
       port: 4000,
     },

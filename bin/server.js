@@ -1,8 +1,11 @@
-var path = require('path')
-var express = require('express')
-var app = express()
-let config = require('../config/index.js');
+var path = require('path');
+var ms = require('ms');
+var express = require('express');
+var app = express();
+var compression = require('compression');
 const fs = require('fs');
+
+let config = require('../config/index.js');
 let _config = config();
 
 const IP = _config.buildtime.origin_server.ip;
@@ -17,9 +20,11 @@ const PORT = _config.buildtime.origin_server.port;
   fs.writeFileSync(htmlPath, htmlData);
 })();
 
+app.use(compression());
 app.use(express.static(path.join(__dirname, '../build/'), {
   etag: true,
   lastModified: true,
+  maxAge: ms('10 days'),
   setHeaders: (res, path) => {
     if (path.endsWith('.html')) {
       res.set('Cache-Control', 'no-cache');
@@ -27,15 +32,11 @@ app.use(express.static(path.join(__dirname, '../build/'), {
   },
 }));
 
-app.get('/config', function(req, res){
-  res.json(_config.runtime);
-})
-
 app.use(function (req, res) {
   res.set('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, '../build/'));
-})
+});
 
 app.listen(PORT, function () {
-  console.log('The app server is working at ' + PORT)
-})
+  console.log(`The app server is working at: http://${IP}:${PORT}`)
+});
