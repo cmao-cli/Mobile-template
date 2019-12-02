@@ -5,9 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { _createStore } from './redux/root-store';
 import { Switch, Route } from 'react-router';
 import { routes } from './pages/router';
+import { setHtmlFont } from './utils';
 
 import './commons/css/style.scss';
 
+setHtmlFont();
 const store = _createStore();
 const rootElement = document.getElementById('root');
 ReactDOM.render(
