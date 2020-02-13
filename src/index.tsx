@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { _createStore } from './redux/root-store';
 import { Switch, Route } from 'react-router';
+
+import { _createStore } from './redux/root-store';
 import { routes } from './pages/router';
 import { setHtmlFont } from './utils';
 
